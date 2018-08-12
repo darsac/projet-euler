@@ -1,0 +1,23 @@
+///solution probleme 3 "Plus grand facteur premier"
+
+#include <string>
+#include <cmath>
+#include <iostream>
+
+using namespace std;
+
+long getGreatestPrimeFactor(long long num) {
+    long i = 2;
+    while (pow(i, 2) < num) {
+        while (num % i == 0) {
+            num /= i;
+        }
+        i++;
+    }
+    return num;
+}
+int main()
+{
+   cout << getGreatestPrimeFactor(600851475143) << endl;
+}
+///reponse 
