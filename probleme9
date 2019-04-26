@@ -1,0 +1,22 @@
+///Solution Probleme n°9 :Special Pytagorean trilet
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int c= 335;
+   int b= 334;
+   int a=100-c-b;
+   while(a+b+c != 1000 or a*a + b*b != c*c)
+   {
+       if(a>b or b == 2)
+       {
+           c +=1;
+           b= c-1;
+       }
+       b-=1;
+       a = 1000 -c-b;
+       cout << "a= "<<a<<" b= "<<b<<" c= "<<c<<" = "<<a*b*c<<endl;
+   }
+}
